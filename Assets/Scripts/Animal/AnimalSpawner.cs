@@ -12,6 +12,10 @@ public class AnimalSpawner : MonoBehaviour
     [SerializeField] private float yPos;
     [SerializeField] private float zPos;
     [SerializeField] private float spawnRate;
+    [SerializeField] private float minSpawnRate;
+    [SerializeField] private float counterDivision;
+    
+    
     
     private void Start()
     {
@@ -20,8 +24,16 @@ public class AnimalSpawner : MonoBehaviour
     
     private IEnumerator SpawnAnimals()
     {
+        int counter = 0;
         while (true)
         {
+            counter++;
+
+            if (counter % counterDivision == 0 && spawnRate > minSpawnRate)
+            {
+                spawnRate = spawnRate - (spawnRate / 5);
+            }
+            
             int randomNumber = Random.Range(0, animals.Length);
             Instantiate(animals[randomNumber], RandownSpawnPosition(), animals[randomNumber].transform.rotation);
 

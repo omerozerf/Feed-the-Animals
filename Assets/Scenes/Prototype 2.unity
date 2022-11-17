@@ -694,7 +694,8 @@ MonoBehaviour:
   yPos: 0
   zPos: 32
   spawnRate: 3
-  destroyRange: -31
+  minSpawnRate: 1
+  counterDivision: 2
 --- !u!4 &1504942449
 Transform:
   m_ObjectHideFlags: 0
