@@ -13,12 +13,11 @@ public class AnimalSpawner : MonoBehaviour
     [SerializeField] private float zPos;
     [SerializeField] private float spawnRate;
     
-
     private void Start()
     {
         StartCoroutine(SpawnAnimals());
     }
-
+    
     private IEnumerator SpawnAnimals()
     {
         while (true)
@@ -36,4 +35,6 @@ public class AnimalSpawner : MonoBehaviour
         float randomXValue = Random.Range(-xRange, xRange);
         return new Vector3(randomXValue, yPos, zPos);
     }
+
+    
 }

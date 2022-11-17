@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1849387299746103571}
   - component: {fileID: -6079590994534649660}
   m_Layer: 0
-  m_Name: Food
+  m_Name: Steak
   m_TagString: Food
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  destroyRange: 26.5
 --- !u!65 &1849387299746103571
 BoxCollider:
   m_ObjectHideFlags: 0

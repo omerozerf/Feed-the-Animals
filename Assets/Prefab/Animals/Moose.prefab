@@ -417,6 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 22.5
+  destroyRange: -31
 --- !u!65 &3412647993661167635
 BoxCollider:
   m_ObjectHideFlags: 0

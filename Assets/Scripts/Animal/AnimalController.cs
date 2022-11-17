@@ -6,10 +6,13 @@ using UnityEngine;
 public class AnimalController : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float destroyRange;
+    
 
     private void Update()
     {
         Move();
+        DestroyAnimals();
     }
 
     private void Move()
@@ -22,6 +25,14 @@ public class AnimalController : MonoBehaviour
         if (other.CompareTag("Food"))
         {
             Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
+    
+    private void DestroyAnimals()
+    {
+        if (transform.position.z < destroyRange)
+        {
             Destroy(gameObject);
         }
     }
