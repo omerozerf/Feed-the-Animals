@@ -8,9 +8,6 @@ public class AnimalController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float destroyRange;
     
-    
-    
-
     private void Update()
     {
         Move();
@@ -36,6 +33,7 @@ public class AnimalController : MonoBehaviour
     {
         if (transform.position.z < destroyRange)
         {
+            UIController.LoseLife();
             Destroy(gameObject);
         }
     }

@@ -1435,6 +1435,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 648651542}
+  leftH: {fileID: 1171690580}
+  midH: {fileID: 896457326}
+  rightH: {fileID: 602810326}
 --- !u!4 &1694139144
 Transform:
   m_ObjectHideFlags: 0
