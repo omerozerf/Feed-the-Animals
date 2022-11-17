@@ -11,19 +11,24 @@ public class AnimalSpawner : MonoBehaviour
     [SerializeField] private float xRange;
     [SerializeField] private float yPos;
     [SerializeField] private float zPos;
+    [SerializeField] private float spawnRate;
+    
 
-    private void Update()
+    private void Start()
     {
-        
+        StartCoroutine(SpawnAnimals());
     }
 
-    private void SpawnAnimals()
+    private IEnumerator SpawnAnimals()
     {
         while (true)
         {
             int randomNumber = Random.Range(0, animals.Length);
             Instantiate(animals[randomNumber], RandownSpawnPosition(), animals[randomNumber].transform.rotation);
+
+            yield return new WaitForSeconds(spawnRate);
         }
+        
     }
 
     private Vector3 RandownSpawnPosition()

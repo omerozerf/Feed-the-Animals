@@ -606,6 +606,7 @@ GameObject:
   - component: {fileID: 3385468302804833924}
   - component: {fileID: 3385468302813907770}
   - component: {fileID: 3385468302813907771}
+  - component: {fileID: 3383405255318321260}
   m_Layer: 0
   m_Name: Doe
   m_TagString: Untagged
@@ -671,6 +672,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+--- !u!65 &3383405255318321260
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3385468302804562018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12321126, y: 0.3774802, z: 0.40816712}
+  m_Center: {x: -0.0043842485, y: 0.17974132, z: 0.041647807}
 --- !u!1 &3385468302804570062
 GameObject:
   m_ObjectHideFlags: 0
