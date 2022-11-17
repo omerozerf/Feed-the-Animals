@@ -8,6 +8,8 @@ public class AnimalController : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float destroyRange;
     
+    
+    
 
     private void Update()
     {
@@ -24,6 +26,7 @@ public class AnimalController : MonoBehaviour
     {
         if (other.CompareTag("Food"))
         {
+            UIController.WinScore();
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
